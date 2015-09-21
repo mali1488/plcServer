@@ -1,9 +1,11 @@
 <html>
+<title>plc modbus</title>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">
+	<link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">

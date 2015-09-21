@@ -15,7 +15,19 @@
     range of 1 ... 255 decimal (the range 128 – 255 is reserved and used for exception 
     responses). When a message is sent from a Client to a Server device the function code field 
     tells the server what kind of action to per
-    form.  Function code "0" is not valid. 
+    form.  Function code "0" is not valid. Common function codes are:<br><br>
+    01	Read coil status<br>
+	02	Read input status<br>
+	03	Read holding registers<br>
+	04	Read input registers<br>
+	05	Force single coil<br>
+	06	Preset single register<br>
+	07	Read exception status<br>
+	15	Force multiple coils<br>
+	16	Preset multiple registers<br>
+	17	Report slave ID<br>
+	<br>
+	<a href="http://www.lammertbies.nl/comm/info/modbus.html">More info can be found here</a>
     <h3>Data</h3>
     Data is not always needed depending on what function code is sent in the PDU. For example
     if the function code is 7 (Read Exception Status), there should be no additional data. But
