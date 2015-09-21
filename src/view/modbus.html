@@ -1,8 +1,27 @@
 <div class="container"><h2>About modbus</h2>
 <p>
+	MODBUS is an application layer messaging protocol, positioned at level 7 of the OSI model, 
+	that provides client/server communication between devices connected on different types of 
+	buses or networks. 
+	<br><br>
 	Each modbus message is composed of a ADU.<br> ADU = Adress(url) + PDU + Error, 
-	where <br> PDU = Functioncode + data(start pin, end pin).
+	where <br> PDU = Functioncode + data(start pin, end pin).<br><br>
+	<img src="./img/modbus.png" alt="picture should be here"></img>
 	<br><br>
 	Example request: ADU = "ip/my/url" + PDU, where <br>PDU = 4 (read input registers) + (0 + 4)(read from pin 0 to pin 4). <br>In the request we dont have any Error.
+	<br><br>
+	<h3>Function codes</h3>
+	The function code field of a MODBUS data unit is coded in one byte. Valid codes are in the 
+    range of 1 ... 255 decimal (the range 128 – 255 is reserved and used for exception 
+    responses). When a message is sent from a Client to a Server device the function code field 
+    tells the server what kind of action to per
+    form.  Function code "0" is not valid. 
+    <h3>Data</h3>
+    Data is not always needed depending on what function code is sent in the PDU. For example
+    if the function code is 7 (Read Exception Status), there should be no additional data. But
+    if the function code is 6 (Write Single Register), there should be 4 bytes of data. 2 bytes 
+    telling the register address and 2 bytes containingthe new value that should be assigned to
+    that register.
 </p>
+
 </div>
