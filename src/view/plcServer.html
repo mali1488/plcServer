@@ -1,0 +1,49 @@
+<div class="text-center">
+	<div class="container">
+		<form>
+			<br>
+			<div class="well">
+				<h2>Enter url to make request</h2>
+				<p> <b>If node is activated:</b> url is http://localhost:8080<br>
+					<b>To activate node:</b> open terminal and locate to plcServer/src/modbus and type<br>
+									  sudo node modbus-server<br>
+									  sudo node server
+				</p>
+			</div>
+			<br>
+			<br>
+			<br>
+            <div class="btn-group">
+        		<label class="btn btn-info" ng-model="radioModel" btn-radio="'read'" uncheckable>Read</label>
+        		<label class="btn btn-info" ng-model="radioModel" btn-radio="'write'" uncheckable>Write</label>
+    		</div>
+            <br><br>
+    
+			Data start at address: 
+			<div class="row">
+				<div class="form-group col-lg-4 col-lg-offset-4">
+					<input class="form-control" type="text" name="startAtAdress" ng-model="dataStart" >
+				</div>
+			</div>
+			How many registers to read:
+			<div class="row">
+				<div class="form-group col-lg-4 col-lg-offset-4">
+					<input class="form-control" type="text" name="howManyBytes" ng-model="dataLength">
+				</div>
+			</div>
+			Url or ip to device/server: 
+			<div class="row">
+				<div class="form-group col-lg-4 col-lg-offset-4">
+					<input class="form-control" type="text" name="url" ng-model="inputText">
+				</div>
+			</div>
+		</form>	
+	</div>
+	<button class="btn btn-primary" ng-click="sendRequest(inputText,dataStart,dataLength)">Request</button>
+	<br>
+	<ul>
+	<div ng-repeat="element in dataFromServer">
+		<li>{{element.response}}</li>
+	</div>
+	</ul>
+</div>

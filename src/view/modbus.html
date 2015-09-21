@@ -1,0 +1,8 @@
+<div class="container"><h2>About modbus</h2>
+<p>
+	Each modbus message is composed of a ADU.<br> ADU = Adress(url) + PDU + Error, 
+	where <br> PDU = Functioncode + data(start pin, end pin).
+	<br><br>
+	Example request: ADU = "ip/my/url" + PDU, where <br>PDU = 4 (read input registers) + (0 + 4)(read from pin 0 to pin 4). <br>In the request we dont have any Error.
+</p>
+</div>
